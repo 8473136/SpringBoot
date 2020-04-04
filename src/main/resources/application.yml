@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://47.97.217.112:3306/school
+    password: 123456
+#显示sql
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #配置下划线转驼峰
+    map-underscore-to-camel-case: true
+  #注册Mapper.xml配置文件
+  mapper-locations: classpath:mapper/*.xml
+#分页配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+#主键方式
+mapper:
+  identity: MYSQL

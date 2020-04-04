@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ljw.school.mapper.StudentMapper">
+    <select id="selectStudentClass" resultType="com.ljw.school.rvo.StudentRVO">
+        select s.name,c.class_name from student s inner join class c on s.class_id = c.id
+    </select>
+</mapper>
